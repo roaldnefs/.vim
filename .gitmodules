@@ -1,3 +1,6 @@
 [submodule "bundle/vim-git"]
 	path = bundle/vim-git
 	url = https://github.com/tpope/vim-git.git
+[submodule "bundle/bundle/vim-go"]
+	path = bundle/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
