@@ -29,9 +29,6 @@ set tabstop=4
 " Number of spaces in TAB when editing
 set softtabstop=4
 
-" TABs are spaces
-set expandtab
-
 
 " UI CONFIGURATION
 " Show line number
@@ -77,3 +74,11 @@ let mapleader=","
 
 " jk is escape
 inoremap jk <esc>
+
+
+" NERDTree
+" Toggle NERDTree using <C-n>
+map <C-n> :NERDTreeToggle<CR>
+" Close vim if the only window left open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
