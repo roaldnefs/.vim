@@ -80,6 +80,12 @@ imap <left> <nop>
 imap <right> <nop>
 
 
+" PANES
+" More natural split opening
+set splitbelow
+set splitright
+
+
 " LEADER
 " Leader is comma
 let mapleader=","
