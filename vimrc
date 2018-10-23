@@ -103,3 +103,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Lightline
 set laststatus=2
+
+
+" vim-go
+" Disable warnings on older Vim releases
+let g:go_version_warning = 0
