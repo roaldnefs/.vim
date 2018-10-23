@@ -1,8 +1,11 @@
 .PHONY: install
-install: ## Sets up symlink for user and root .vimrc for vim.
+install: ## Sets up symlink for user .vimrc for vim.
 	ln -snf "$(HOME)/.vim/vimrc" "$(HOME)/.vimrc"
-#	sudo ln -snf "$(HOME)/.vim" /root/.vim
-#	sudo ln -snf "$(HOME)/.vimrc" /root/.vimrc
+
+.PHONY: install-root
+install-root: ## Sets up symlink for root .vimrc for vim.
+	sudo ln -snf "$(HOME)/.vim" /root/.vim
+	sudo ln -snf "$(HOME)/.vimrc" /root/.vimrc
 
 .PHONY: update
 update: update-pathogen update-plugins ## Updates pathogen and all plugins.
