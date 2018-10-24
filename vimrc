@@ -6,6 +6,11 @@ set nocompatible
 filetype off
 filetype plugin indent on
 
+" Influence the working of <BS> in Insert mode
+" This allows backspacing over autoindent, line breaks and over the start of
+" start of
+set backspace=indent,eol,start
+
 " OLD CONFIGURATION
 set nu
 syn on
