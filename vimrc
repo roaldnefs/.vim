@@ -27,6 +27,7 @@
 "    -> Misc
 "    -> Plugin specific configuration
 "    -> Helper functions
+"    -> External configuration
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -291,3 +292,13 @@ let g:go_version_warning = 0
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => External configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Load optional external configuration file
+try
+    source ~/.vimrc_personal
+catch
+    " No such file? No problem, just ignore it
+endtry

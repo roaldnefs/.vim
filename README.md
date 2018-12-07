@@ -29,3 +29,7 @@ update-pathogen                Update pathogen.
 update-plugins                 Updates all plugins.
 update                         Updates pathogen and all plugins.
 ```
+
+## Personal Configuration
+
+You overwrite the default configuration by creating a `~/.vimrc_personal` file.
