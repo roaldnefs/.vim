@@ -15,7 +15,7 @@ Based upon [jessfraz/.vim](https://github.com/jessfraz/.vim).
 
 ## Pathogen
 
-The vim dotfiles make used of [Pathogen] runtime path manager to install
+The vim dotfiles make used of [Pathogen](https://github.com/tpope/vim-pathogen) runtime path manager to install
 plugins and runtime files into their own private directories.
 
 ## Updating and Installing
