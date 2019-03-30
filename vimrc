@@ -205,6 +205,8 @@ set ai
 set si
 " Wrap lines
 set wrap
+" Do not automatically wrap text when typing
+set formatoptions-=t
 
 au BufNewFile,BufRead *.vim setlocal noet ts=4 sw=4 sts=4
 au BufNewFile,BufRead *.txt setlocal noet ts=4 sw=4
