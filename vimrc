@@ -158,6 +158,12 @@ try
 catch
 endtry
 
+try
+    colorscheme paper
+    set bg=light
+catch
+endtry
+
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
