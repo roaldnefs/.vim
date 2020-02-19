@@ -8,7 +8,7 @@ $ cd ~/
 $ git clone --recursive https://github.com/roaldnefs/.vim.git .vim
 $ ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 $ cd $HOME/.vim
-$ git submodule update --init
+$ make install
 ```
 
 Based upon [jessfraz/.vim](https://github.com/jessfraz/.vim).
@@ -24,7 +24,8 @@ You can use the `Makefile` to run a series of commands.
 
 ```bash
 $ make help
-install                        Sets up symlink for user and root .vimrc for vim.
+install                        Installs plugins, sets up symlink for user .vimrc for vim.
+install-root                   Sets up symlink for root .vimrc for vim.
 update-pathogen                Update pathogen.
 update-plugins                 Updates all plugins.
 update                         Updates pathogen and all plugins.

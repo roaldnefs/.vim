@@ -1,5 +1,6 @@
 .PHONY: install
-install: ## Sets up symlink for user .vimrc for vim.
+install: ## Installs plugins, sets up symlink for user .vimrc for vim.
+	git submodule update  --init --recursive
 	ln -snf "$(HOME)/.vim/vimrc" "$(HOME)/.vimrc"
 
 .PHONY: install-root
@@ -12,7 +13,6 @@ update: update-pathogen update-plugins ## Updates pathogen and all plugins.
 
 .PHONY: update-plugins
 update-plugins: ## Updates all plugins.
-	git submodule update  --init --recursive
 	git submodule foreach git pull --recurse-submodules origin master
 
 .PHONY: update-pathogen
