@@ -206,7 +206,6 @@ set formatoptions-=t
 au BufNewFile,BufRead *.vim setlocal noet ts=4 sw=4 sts=4
 au BufNewFile,BufRead *.txt setlocal noet ts=4 sw=4
 au BufNewFile,BufRead *.md setlocal spell noet ts=4 sw=4
-au BufNewFile,BufRead *.yml,*.yaml setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.json setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 au BufNewFile,BufRead *.pp setlocal expandtab ts=2 sw=2
@@ -267,8 +266,8 @@ map <leader>ss :setlocal spell!<cr>
 map <leader>pp :setlocal paste!<cr>
 
 " Make tabs, trailing whitespace, and non-breaking spaces visible
-"exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
-"set list
+exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+set list
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
