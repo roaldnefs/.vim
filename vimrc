@@ -199,7 +199,7 @@ set ai
 " Smart indent
 set si
 " Wrap lines
-set wrap
+set nowrap
 " Do not automatically wrap text when typing
 set formatoptions-=t
 
@@ -208,6 +208,7 @@ au BufNewFile,BufRead *.txt setlocal noet ts=4 sw=4
 au BufNewFile,BufRead *.md setlocal spell noet ts=4 sw=4
 au BufNewFile,BufRead *.json setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.yml,*.yaml setlocal expandtab ts=2 sw=2
+au BufNewFile,BufRead *.sh,*.bash setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 au BufNewFile,BufRead *.pp setlocal expandtab ts=2 sw=2
 autocmd FileType dockerfile set noexpandtab
