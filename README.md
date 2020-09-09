@@ -6,10 +6,11 @@ commands to get set up:
 ```bash
 $ cd ~/
 $ git clone --recursive https://github.com/roaldnefs/.vim.git .vim
-$ ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 $ cd $HOME/.vim
 $ make install
 ```
+
+Make sure you don't have a `$HOME/.vimrc` file present, as this takes precedence over `$HOME/.vim/vimrc`
 
 Based upon [jessfraz/.vim](https://github.com/jessfraz/.vim).
 
