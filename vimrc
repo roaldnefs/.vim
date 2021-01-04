@@ -1,6 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainers:
 "     Roald Nefs <info@roaldnefs.com>
+"     Jeffrey Bouter <github@kn0x.org>
 "
 " Description:
 "     Install this vim configuration from:
