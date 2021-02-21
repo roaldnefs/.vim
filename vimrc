@@ -1,7 +1,6 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainers:
-"     Roald Nefs <info@roaldnefs.com>
-"     Jeffrey Bouter <github@kn0x.org>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Vim configuration.
 "
 " Description:
 "     Install this vim configuration from:
@@ -12,6 +11,10 @@
 "
 "         https://github.com/jessfraz/.vim
 "         https://github.com/amix/vimrc
+"
+" Maintainers:
+"     Roald Nefs <info@roaldnefs.com>
+"     Jeffrey Bouter <github@kn0x.org>
 "
 " Sections:
 "    -> General
@@ -30,56 +33,53 @@
 "    -> Helper functions
 "    -> External configuration
 "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Load plugins using Pathogen
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Load plugins using Pathogen.
 execute pathogen#infect()
 call pathogen#helptags()
 
-" Be improved
+" Be improved.
 set nocompatible
 
-" Sets how many lines of history VIM has to remember
+" Sets how many lines of history VIM has to remember.
 set history=500
 
-" Enable filetype plugins
+" Enable filetype plugins.
 filetype plugin on
 filetype indent on
 
-" Set to auto read when a file is changed from the outside
+" Set to auto read when a file is changed from the outside.
 set autoread
 
-" With a map leader it's possible to do exta key combinations
-" like <leader>w saves the current file
+" With a map leader it's possible to do exta key combinations like <leader>w
+" saves the current file.
 let mapleader=","
 
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" Save the using sudo with :W, usefile for handling the
-" permission-denied error
+" Save the using sudo with :W, useful for handling the permission-denied error.
 command W w !sudo tee % > /dev/null
 
-" Influence the working of <BS> in Insert mode
-" This allows backspacing over autoindent, line breaks and
-" over the start of start of
+" Influence the working of <BS> in Insert mode. This allows backspacing over
+" autoindent, line breaks and over start.
 set backspace=indent,eol,start
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 7 lines to the cursor, when moving vertically using j/k
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set 7 lines to the cursor, when moving vertically using j/k.
 set so=7
 
-" Turn on the Wild menu
+" Turn on the Wild menu.
 set wildmenu
 
-" set wildmode=list:longest
 set wildmode=list:full
 
 set wildignore+=.hg,.git,.svn                    " Version control
@@ -97,64 +97,65 @@ set wildignore+=go/bin-vagrant                   " Go bin-vagrant files
 set wildignore+=*.pyc                            " Python byte code
 set wildignore+=*.orig                           " Merge resolution files
 
-" Always show current position
+" Always show current position.
 set ruler
 
-" Show line numbers
+" Show line numbers.
 set number
 
-" Height of the command bar
+" Height of the command bar.
 set cmdheight=2
 
-" A buffer becomes hidden when it is abandoned
+" A buffer becomes hidden when it is abandoned.
 set hid
 
-" Configure backspace so it acts as it should act
+" Configure backspace so it acts as it should act.
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-" Ignore case when searching
+" Ignore case when searching.
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases.
 set smartcase
 
-" Highlight search results
+" Highlight search results.
 set hlsearch
 
-" Makes search act like search in modern browsers
+" Makes search act like search in modern browsers.
 set incsearch
 
-" Don't redraw while executing macros (good performance config)
+" Don't redraw while executing macros (good performance configuration).
 set lazyredraw
 
-" For regular expressions turn magic on
+" For regular expressions turn magic on.
 set magic
 
-" Show matching brackets when text indicator is over them
+" Show matching brackets when text indicator is over them.
 set showmatch
-" How many tenths of a second to blink when matching brackets
+
+" How many tenths of a second to blink when matching brackets.
 set mat=2
 
-" No annoying sound on errors
+" No annoying sound on errors.
 set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting.
 syntax enable
 
-" Enable 256 colors palette in Gnome Terminal
+" Enable 256 colors palette in Gnome Terminal.
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-" Set extra options when running in GUI mode
+" Set extra options when running in GUI mode.
 if has("gui_running")
     set guioptions-=T
     set guioptions-=e
@@ -162,46 +163,46 @@ if has("gui_running")
     set guitablabel=%M\ %t
 endif
 
-" Set utf8 as standard encoding and en_US as the standard language
+" Set utf8 as standard encoding and en_US as the standard language.
 set encoding=utf8
 
-" Use Unix as the standard file type
+" Use Unix as the standard file type.
 set ffs=unix,dos,mac
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backup off, since most stuff is in version control anyway
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in version control anyway.
 set nobackup
 set nowb
 set noswapfile
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use spaces instead of tabs.
 set expandtab
 
-" Be smart when using tabs
+" Be smart when using tabs.
 set smarttab
 
-" A tab should be 4 spaces wide
+" A tab should be 4 spaces wide.
 set shiftwidth=4
 set tabstop=4
 
-" Linebreak on 500 characters
+" Linebreak on 500 characters.
 set lbr
 set tw=500
 
-" Auto indent
-set ai
-" Smart indent
-set si
-" Wrap lines
+" Configure indentation.
+set ai       " Enable auto indent
+set si       " Enable smart indent
+
+" Wrap lines.
 set nowrap
-" Do not automatically wrap text when typing
+" Do not automatically wrap text when typing.
 set formatoptions-=t
 
 au BufNewFile,BufRead *.vim setlocal noet ts=4 sw=4 sts=4
@@ -221,85 +222,83 @@ autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 te
 autocmd FileType gitcommit setlocal spell
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Disable highlight when <leader><cr> is pressed
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Disable highlight when <leader><cr> is pressed.
 map <silent> <leader><cr> :noh<cr>
 
-" Smart way to move between windows
+" Smart way to move between windows.
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Return to last edit position when opening files (You want this!)
+" Return to last edit position when opening files (You want this!).
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" Move vertically by visual line
+" Move vertically by visual line.
 nnoremap j gj
 nnoremap k gk
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status line
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Always show the status line
 set laststatus=2
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pressing ,ss will toggle and untoggle spell checking
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pressing ,ss will toggle and untoggle spell checking.
 map <leader>ss :setlocal spell!<cr>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Toggle past mode on and off
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Toggle past mode on and off.
 map <leader>pp :setlocal paste!<cr>
 
-" Make tabs, trailing whitespace, and non-breaking spaces visible
+" Make tabs, trailing whitespace, and non-breaking spaces visible.
 exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
 set list
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin specific configuration
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree
-" Toggle NERDTree using <C-n>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree, toggle NERDTree using <C-n>.
 map <C-n> :NERDTreeToggle<CR>
-" Close vim if the only window left open is NERDTree
+" Close vim if the only window left open is NERDTree.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" vim-go
-" Disable warnings on older Vim releases
+" vim-go, isable warnings on older Vim releases.
 let g:go_version_warning = 0
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => External configuration
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Load optional external configuration file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Load optional external configuration file.
 try
     source ~/.vimrc_personal
 catch
-    " No such file? No problem, just ignore it
+    " No such file? No problem, just ignore it...
 endtry
