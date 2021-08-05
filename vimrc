@@ -122,6 +122,9 @@ set smartcase
 " Highlight search results.
 set hlsearch
 
+" Make comments italic
+highlight Comment cterm=italic gui=italic
+
 " Makes search act like search in modern browsers.
 set incsearch
 
