@@ -305,3 +305,6 @@ try
 catch
     " No such file? No problem, just ignore it...
 endtry
+
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
